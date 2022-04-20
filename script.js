@@ -1,81 +1,91 @@
 let animeList = [{
-        link: "https://wallpaperforu.com/wp-content/uploads/2021/02/Wallpaper-Attack-On-Titan-Wallpaper-Shingeki-No-Kyojin-E12.jpg",
+        image:"",
         name: "Snk",
         year: 2013,
         genre: "lorem",
-        description: "lorem"
+        description: "lorem",
+        author:"ll",
 
     },
     {
-        image: "mm",
+        image:"",
+        name: "mushoku tensei",
+        year: 2013,
+        genre: "lorem",
+        description: "lorem",
+        author:"ll",
+
+    },
+    {
+        image:"",
         name: "Snk",
         year: 2013,
         genre: "lorem",
-        description: "lorem"
+        description: "lroem",
+        author:"ll",
 
     },
     {
-        image: "ff",
+        image:"",
         name: "Snk",
         year: 2013,
         genre: "lorem",
-        description: "lroem"
+        description: "lorem",
+        author:"ll",
 
     },
     {
-        image: "img",
+        image:"",
         name: "Snk",
         year: 2013,
         genre: "lorem",
-        description: "lorem"
+        description: "lorem",
+        author:"ll",
 
     },
     {
-        image: "mm",
+        image:"",
         name: "Snk",
         year: 2013,
         genre: "lorem",
-        description: "lorem"
+        description: "lorem",
+        author:"ll",
 
     },
     {
-        image: "mm",
+        image: "",
         name: "Snk",
         year: 2013,
         genre: "lorem",
-        description: "lorem"
+        description: "lorem",
+        author:"ll",
 
     },
     {
-        image: "image",
+        image:"",
         name: "Snk",
         year: 2013,
         genre: "lorem",
-        description: "lorem"
+        description: "lorem",
+        author:"ll",
 
     },
     {
-        image: "img",
+        image:"",
         name: "Snk",
         year: 2013,
         genre: "lorem",
-        description: "lorem"
+        description: "lorem",
+        author:"ll",
 
     },
     {
-        image: "img",
-        name: "Snk",
-        year: 2013,
-        genre: "lorem",
-        description: "lorem"
-
-    },
-    {
-        image: "img",
+        image:"",
         name: "hello",
         year: 2013,
         genre: "lorem",
-        description: "lorem"
+        description: "lorem",
+        author:"ll",
 
     },
 ]
@@ -87,17 +97,19 @@ for (let i = 0; i < animeList.length; i++) {
     main.appendChild(figure);
     /*img*/
     let img = document.createElement('img')
-    img.innerHTML = animeList[i].link;
+    img.innerHTML = animeList[i].image;
     figure.appendChild(img)
 
-    /*h3*/
+    /*name*/
+    let div  =document.createElement('div')
     let h3 = document.createElement('h3')
     h3.innerHTML = animeList[i].name
-    figure.appendChild(h3)
-    /*year*/
+    div.appendChild(h3)
+    /*genre*/
     let h4 = document.createElement('h4')
     h4.innerHTML = animeList[i].genre
-    figure.appendChild(h4)
+    div.appendChild(h4)
+    figure.appendChild(div)
     /*description*/
     let paragraphe = document.createElement('p')
     paragraphe.innerHTML = animeList[i].description
@@ -107,5 +119,6 @@ for (let i = 0; i < animeList.length; i++) {
     italic.innerHTML = animeList[i].year;
     figure.appendChild(italic)
 
-    console.log(animeList[i]);
+
 }
+
