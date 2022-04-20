@@ -93,12 +93,12 @@ let animeList = [{
 let main = document.querySelector('main')
 
 for (let i = 0; i < animeList.length; i++) {
-    let figure = document.createElement('figure');
-    main.appendChild(figure);
+    let article = document.createElement('article');
+    main.appendChild(article);
     /*img*/
     let img = document.createElement('img')
     img.innerHTML = animeList[i].image;
-    figure.appendChild(img)
+    article.appendChild(img)
 
     /*name*/
     let div  =document.createElement('div')
@@ -109,18 +109,19 @@ for (let i = 0; i < animeList.length; i++) {
     let h4 = document.createElement('h4')
     h4.innerHTML = animeList[i].genre
     div.appendChild(h4)
-    figure.appendChild(div)
+    article.appendChild(div)
     /*description*/
     let paragraphe = document.createElement('p')
     paragraphe.innerHTML = animeList[i].description
-    figure.appendChild(paragraphe)
+    article.appendChild(paragraphe)
     /*year*/
     let italic = document.createElement('em');
     italic.innerHTML = animeList[i].year;
-    figure.appendChild(italic)
+    article.appendChild(italic)
+    /*author*/ 
     let p = document.createElement('p')
     p.innerHTML = animeList[i].author;
-    figure.appendChild(p)
+    article.appendChild(p)
 
 
 }
