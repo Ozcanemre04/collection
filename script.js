@@ -105,8 +105,18 @@ let animeList = [{
         author:"Gege Akutami",
     }
 ]
+let body = document.querySelector('body')
+let header0 = document.createElement("header")
+body.appendChild(header0)
+let h1 = document.createElement('h1')
+let h2 = document.createElement('h2')
 
-let main = document.querySelector('main')
+header0.appendChild(h1);
+header0.appendChild(h2);
+h1.innerHTML="my collection"
+h2.innerHTML = "my favorite anime"
+let main = document.createElement("main")
+body.appendChild(main)
 
 for (let i = 0; i < animeList.length; i++) {
     let article = document.createElement('article');
