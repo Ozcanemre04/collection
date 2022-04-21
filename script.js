@@ -88,6 +88,22 @@ let animeList = [{
         author:"Yūki Kodama",
 
     },
+    {
+        image:"",
+        name:"Tate no Yuusha no Nariagari",
+        year:2019,
+        genre:"	Action, aventure, drame, fantasy",
+        description:"Naofumi se voit un jour invoqué dans un monde fantastique avec trois autres personnes afin de devenir les héros de ce monde. Dès leur arrivée, chacun se retrouve équipé d'une des quatre armes légendaires où Naofumi hérite d'un simple bouclier considéré comme le plus inutile des quatre équipements.En raison de son manque de charisme, Naofumi finit malheureusement avec une seule coéquipière tandis que les autres en avaient plusieurs. Et comme si cela ne suffisait pas, lors du deuxième jour, il a été trahi, accusé à tort et volé par ladite partenaire.Méprisé de tous, du roi aux paysans, le jeune homme ne pense désormais plus qu'à se venger !",
+        author:"Amamichi Akano",
+    },
+    {
+        image:"",
+        name:"Jujustu kaisen",
+        year:2020,
+        genre:"	Adventure,Dark fantasy,Supernatural",
+        description:"Plus de 10 000 morts et disparus sont recensés chaque année au Japon. Les sentiments négatifs que relâchent les êtres humains sont en cause. Souffrance, regrets, humiliation : leur concentration dans un même endroit engendre des malédictions souvent mortelles... C'est ce que va découvrir Yuji Itadori, lycéen et membre du club d'occultisme. Il ne croit pas aux fantômes, mais il est doté d'une force physique hors norme qui représente un véritable atout pour les missions du groupe... jusqu'à ce que l'une d'elles prenne une mauvaise tournure. La relique qu'ils dénichent, le doigt découpé d'un démon millénaire, attire les monstres ! Sans réfléchir : le jeune homme avale la relique pour briser la malédiction ! Maintenant, il se trouve possédé par Ryômen Sukuna, le célèbre démon à deux visages. Cependant, contre toute attente, Yuji est toujours capable de garder le contrôle de son corps. Mais en dépit de cela, il est condamné à mort par l'organisation des exorcistes... Une décision qui ne pourra être repoussée qu'à une seule condition : trouver tous les doigts de Sukuna afin d'écarter la menace une bonne fois pour toutes !",
+        author:"Gege Akutami",
+    }
 ]
 
 let main = document.querySelector('main')

@@ -53,7 +53,7 @@ article{
  div{
    
     
-    background-color:aqua;
+    background-color:midnightblue;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -105,9 +105,17 @@ article:nth-of-type(8) img{
 article:nth-of-type(9) img{
     background-image: url(./img/haikyuu-saison-5.jpeg);
 }
-article:last-of-type img{
+article:nth-of-type(10) img{
     background-image: url(./img/bloody_brat_vo_3620.jpg);
     background-position: top 10px left 1px;
+}
+article:nth-of-type(11) img{
+    background-image: url(./img/shield.jpg.jpg);
+    
+}
+article:last-of-type img{
+    background-image: url(./img/jujustu.jpg.jpg);
+    
     
 }
 
@@ -123,6 +131,7 @@ img{
 }
 section p{
     margin: 10px;
+    color: midnightblue;
 }
 section{
     width: 90%;
