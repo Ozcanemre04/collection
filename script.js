@@ -20,7 +20,7 @@ let animeList = [{
         image:"",
         name: "Death Note",
         year: 2006 + "-" + 2007,
-        genre: "Policier, Fantastique, Thriller psychologique, Surnaturel, Mystère, Suiri",
+        genre: "Policier, Fantastique, Thriller psychologique, Surnaturel, Mystère",
         description: "Light Yagami, un jeune étudiant surdoué, ramasse un jour le 'Death Note', un carnet abandonné par un dieu de la mort, Ryuk, qui apparemment s'ennuyait dans son monde. Il suffit d'écrire le nom d'une personne dans ce carnet, et celle-ci meurt. C'est ainsi qu'avec le 'Death Note' entre les mains, Light décide de débarrasser la planète de tous les criminels pour en faire un monde juste, un monde parfait.",
         author:"Tsugumi Ōba",
 
@@ -55,7 +55,7 @@ let animeList = [{
     {
         image: "",
         name: "Kingdom",
-        year: 4+"juillet"+2012,
+        year: 4+"juillet "+2012,
         genre: "Action, aventure, drame, historique",
         description: "Dans la période de l'ancienne Chine, Shin et Hyou sont des orphelins de guerre dans le royaume de Qin. Ils rêvent un jour de pouvoir se rendre sur un champ de guerre. Un jour, Hyou est amené au palais par un ministre, pris par erreur pour le roi du royaume ennemi. Il parvient cependant à revenir au village en vie pour apprendre à Shin où se trouverait le vrai roi.",
         author:"Yasuhisa Hara",
@@ -98,30 +98,38 @@ for (let i = 0; i < animeList.length; i++) {
     /*img*/
     let img = document.createElement('img')
     img.innerHTML = animeList[i].image;
-    article.appendChild(img)
+    let header  =document.createElement('header')
+    article.appendChild(header)
+    header.appendChild(img)
 
     /*name*/
-    let div  =document.createElement('div')
+    let div = document.createElement('div')
+    header.appendChild(div)
     let h3 = document.createElement('h3')
+    div.appendChild(h3);
     h3.innerHTML = animeList[i].name
-    div.appendChild(h3)
+    
     /*genre*/
     let h4 = document.createElement('h4')
     h4.innerHTML = animeList[i].genre
     div.appendChild(h4)
-    article.appendChild(div)
+    
     /*description*/
-    let paragraphe = document.createElement('p')
+    let paragraphe = document.createElement('p');
+    let section = document.createElement('section')
     paragraphe.innerHTML = animeList[i].description
-    article.appendChild(paragraphe)
+    article.appendChild(section)
+    section.appendChild(paragraphe)
     /*year*/
-    let italic = document.createElement('em');
-    italic.innerHTML = animeList[i].year;
-    article.appendChild(italic)
+    let footer = document.createElement('footer')
+    let em = document.createElement('em');
+    em.innerHTML = animeList[i].year;
+    footer.appendChild(em)
+    article.appendChild(footer)
     /*author*/ 
-    let p = document.createElement('p')
-    p.innerHTML = animeList[i].author;
-    article.appendChild(p)
+    let italic = document.createElement('i')
+    italic.innerHTML = animeList[i].author;
+    footer.appendChild(italic)
 
 
 }
