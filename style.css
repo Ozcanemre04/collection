@@ -12,7 +12,7 @@ body >header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color: blue;
+    background-color: grey;
     color: white;
     height: 100px;
     width: 100%;
@@ -25,9 +25,8 @@ header>h2{
     margin-right: 10px;
 }
 
-article{
-    gap: 10px;
-    background-color: yellow;
+article>header{
+    width: 100%;
 }
 
 
@@ -47,23 +46,31 @@ article{
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
+    gap: 10px;
+    background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);;
     
 }
  div{
    
     
-    background-color: gray;
+    background-color:aqua;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     width: 100%;
-    
+    height: 200px;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #f69d3c;
+    border-radius: 10px;
 }
-article header h3{
-    
+div h3{
+    color: #f69d3c;
     margin:10px;
+    
 }
-article header h4{
+div h4{
+    color: white;
     margin: 10px;
 }
 article:first-of-type img{
@@ -131,7 +138,12 @@ footer{
     margin-bottom: 10px;
     
 }
-
+i{
+    color: purple;
+}
+em{
+    color: white;
+}
 
 
 
@@ -141,17 +153,17 @@ footer{
 
 
 @media (min-width:320px) and (max-width:480px) {
-    header{
+    body>header{
         display: flex;
         flex-direction: column;
         height: 120px;
         justify-content: center;
         
     }
-    header h2{
+    body>header h2{
         margin:0;
     }
-    header h1{
+    body>header h1{
         margin: 0 0 10px 0;
     }
 }

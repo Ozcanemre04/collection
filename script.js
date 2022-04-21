@@ -28,7 +28,7 @@ let animeList = [{
     {
         image:"",
         name: "Demon slayer",
-        year: "Depuis" + 2019,
+        year: "Depuis " + 2019,
         genre: "Fantastique, Action, Animation",
         description: "Depuis les temps anciens, il existe des rumeurs concernant des démons mangeurs d'hommes qui se cachent dans les bois. Pour cette raison, les citadins locaux ne s'y aventurent jamais la nuit. La légende raconte aussi qu'un tueur déambule la nuit, chassant ces démons assoiffés de sang. Depuis la mort de son père, Tanjiro a pris sur lui pour subvenir aux besoins de sa famille. Malgré cette tragédie, ils réussissent à trouver un peu de bonheur au quotidien. Cependant, ce peu de bonheur se retrouve détruit le jour où Tanjiro découvre que sa famille s'est fait massacrer et que la seule survivante, sa sœur Nezuko, est devenue un démon. À sa grande surprise, Nezuko montre encore des signes d'émotion et de pensées humaines. Ainsi, commence la dure tâche de Tanjiro, celle de combattre les démons et de faire redevenir sa sœur humaine.",
         author:"Koyoharu Gotouge",
@@ -55,7 +55,7 @@ let animeList = [{
     {
         image: "",
         name: "Kingdom",
-        year: 4+"juillet "+2012,
+        year: 4+" juillet "+2012,
         genre: "Action, aventure, drame, historique",
         description: "Dans la période de l'ancienne Chine, Shin et Hyou sont des orphelins de guerre dans le royaume de Qin. Ils rêvent un jour de pouvoir se rendre sur un champ de guerre. Un jour, Hyou est amené au palais par un ministre, pris par erreur pour le roi du royaume ennemi. Il parvient cependant à revenir au village en vie pour apprendre à Shin où se trouverait le vrai roi.",
         author:"Yasuhisa Hara",
