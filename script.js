@@ -1,5 +1,5 @@
 let animeList = [{
-        image:"",
+        image:"./img/snk.jpg",
         name: "Attaque des titans",
         year: 2013,
         genre: ["Aventure, Action, Animation"],
@@ -8,7 +8,7 @@ let animeList = [{
 
     },
     {
-        image:"",
+        image:"./img/mushoku tensei.jpg",
         name: "mushoku tensei",
         year: 2021,
         genre: ["Action, Aventure, Drame, Ecchi, Fantaisie, Isekai, Magie"],
@@ -17,7 +17,7 @@ let animeList = [{
 
     },
     {
-        image:"",
+        image:"./img/deathnote.jpg",
         name: "Death Note",
         year: 2006 + "-" + 2007,
         genre: ["Policier, Fantastique, Thriller psychologique, Surnaturel, Mystère"],
@@ -26,7 +26,7 @@ let animeList = [{
 
     },
     {
-        image:"",
+        image:"./img/demonslayer.jpg",
         name: "Demon slayer",
         year: "Depuis " + 2019,
         genre: ["Fantastique, Action, Animation"],
@@ -35,7 +35,7 @@ let animeList = [{
 
     },
     {
-        image:"",
+        image:"./img/berserk.jpg",
         name: "Berserk",
         year: 1997,
         genre: ["Action, aventure, drame, horreur, dark fantasy, heroic fantasy"],
@@ -44,7 +44,7 @@ let animeList = [{
 
     },
     {
-        image:"",
+        image:"./img/tower of god.jpg",
         name: "Tower of God",
         year: 2020,
         genre: ["Action, Aventure, drame, dark fantasy, mystère, science-fiction"],
@@ -53,7 +53,7 @@ let animeList = [{
 
     },
     {
-        image: "",
+        image: "./img/kingdom.jpg",
         name: "Kingdom",
         year: 4+" juillet "+2012,
         genre: ["Action, aventure, drame, historique"],
@@ -62,7 +62,7 @@ let animeList = [{
 
     },
     {
-        image:"",
+        image:"./img/hajime no ippo.jpg",
         name: "Hajime no ippo",
         year: 2000,
         genre: "Sport",
@@ -71,7 +71,7 @@ let animeList = [{
 
     },
     {
-        image:"",
+        image:"./img/haikyuu-saison-5.jpeg",
         name: "Haikyuu",
         year: 2014,
         genre: ["Comédie, sport"],
@@ -80,7 +80,7 @@ let animeList = [{
 
     },
     {
-        image:"",
+        image:"./img/bloodybrat.jpg",
         name: "Blood lad",
         year: 2012,
         genre: ["Action, humour noir, fantastique"],
@@ -89,7 +89,7 @@ let animeList = [{
 
     },
     {
-        image:"",
+        image:"./img/shield.jpg",
         name:"Tate no Yuusha no Nariagari",
         year:2019,
         genre: ["Action, aventure, drame, fantasy"],
@@ -97,7 +97,7 @@ let animeList = [{
         author:"Amamichi Akano",
     },
     {
-        image:"",
+        image:"./img/jujustu.jpg.jpg",
         name:"Jujustu kaisen",
         year:2020,
         genre:["Adventure,Dark fantasy,Supernatural"],
@@ -110,20 +110,31 @@ let header0 = document.createElement("header")
 body.appendChild(header0)
 let h1 = document.createElement('h1')
 let h2 = document.createElement('h2')
+let input = document.querySelector('#searchbar')
+input.addEventListener('keyup', function(e){
+    console.log(e.target.value);
+    const lowerCase = e.target.value.toLowerCase()
+    const result = animeList.filter(anime => anime.name.toLocaleLowerCase().startsWith(lowerCase));
+
+afficher(result)
+})
 
 header0.appendChild(h1);
-header0.appendChild(h2);
+header0.appendChild(input);
 h1.innerHTML="my collection"
-h2.innerHTML = "my favorite anime"
+
 let main = document.createElement("main")
 body.appendChild(main)
 
-for (let i = 0; i < animeList.length; i++) {
+function afficher(arr){
+     
+    main.innerHTML='';
+for (let i = 0; i <arr.length; i++) {
     let article = document.createElement('article');
     main.appendChild(article);
     /*img*/
     let img = document.createElement('img')
-    img.innerHTML = animeList[i].image;
+    img.src =arr[i].image;
     let header  =document.createElement('header')
     article.appendChild(header)
     header.appendChild(img)
@@ -133,33 +144,34 @@ for (let i = 0; i < animeList.length; i++) {
     header.appendChild(div)
     let h3 = document.createElement('h3')
     div.appendChild(h3);
-    h3.innerHTML = animeList[i].name
+    h3.innerHTML = arr[i].name
     
     /*genre*/
     let h4 = document.createElement('h4')
-    h4.innerHTML = animeList[i].genre
+    h4.innerHTML = arr[i].genre
     div.appendChild(h4)
     
     /*description*/
     let paragraphe = document.createElement('p');
     let section = document.createElement('section')
-    paragraphe.innerHTML = animeList[i].description
+    paragraphe.innerHTML = arr[i].description
     article.appendChild(section)
     section.appendChild(paragraphe)
     /*year*/
     let footer = document.createElement('footer')
     let em = document.createElement('em');
-    em.innerHTML = animeList[i].year;
+    em.innerHTML = arr[i].year;
     footer.appendChild(em)
     article.appendChild(footer)
     /*author*/ 
     let italic = document.createElement('i')
-    italic.innerHTML = animeList[i].author;
+    italic.innerHTML = arr[i].author;
     footer.appendChild(italic)
 
 
 }
-
+}
+afficher(animeList)
 
 let button = document.querySelector('button')
 
