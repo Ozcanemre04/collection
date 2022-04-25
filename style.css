@@ -91,9 +91,27 @@ img{
     border: 1px solid blue;
     border-radius: 10px;
     margin: 10px;
-    height: 200px;
+    height: 300px;
     width: 90%;
     
+    
+}
+picture{
+    position: relative;
+    display: inline-block;
+}
+figcaption{
+    
+    position: absolute;
+    z-index: 999;
+    margin: 0 auto;
+    left: -60%;
+    right: 0;
+    top: 15px; 
+    text-align:center;
+    width: 25%;
+    background-color: #3f87a6;
+    color: white;
 }
 section p{
     margin: 10px;
@@ -151,8 +169,9 @@ button:hover{
     body>header{
         display: flex;
         flex-direction: column;
-        height: 120px;
+        height: 150px;
         justify-content: center;
+        
         
     }
     body>header h2{
@@ -160,5 +179,19 @@ button:hover{
     }
     body>header h1{
         margin: 0 0 10px 0;
+    }
+    .dom{
+        display: flex;
+        flex-direction: row;
+        flex-basis: 80%;
+        overflow-y: hidden;
+        padding-bottom: 10px;
+
+    }
+    #searchbar{
+        margin-bottom: 10px;
+    }
+    button{
+        display: none;
     }
 }
