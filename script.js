@@ -109,19 +109,44 @@ let body = document.querySelector('body')
 let header0 = document.createElement("header")
 body.appendChild(header0)
 let h1 = document.createElement('h1')
-let h2 = document.createElement('h2')
+
 let input = document.querySelector('#searchbar')
-input.addEventListener('keyup', function(e){
+input.addEventListener('keyup', function firstfunction(e){
     console.log(e.target.value);
     const lowerCase = e.target.value.toLowerCase()
     const result = animeList.filter(anime => anime.name.toLocaleLowerCase().startsWith(lowerCase));
+    
+    afficher(result)
+})
+let dom = document.querySelector('.dom')
+header0.appendChild(dom)
+header0.insertBefore(h1,header0.firstChild)
+dom.appendChild(input);
+h1.innerHTML="my collection"
 
-afficher(result)
+let select = document.querySelector('#select')
+dom.appendChild(select)
+
+
+
+
+select.addEventListener('change',function(){
+    let vl0 = select.value
+    if(vl0==="author"){
+        
+        input.addEventListener('keyup', function(e){
+            console.log(e.target.value);
+            const lowerCase = e.target.value.toLowerCase()
+            const result = animeList.filter(anime => anime.author.toLocaleLowerCase().startsWith(lowerCase));
+          
+            afficher(result)
+        })
+        
+    }
+  
 })
 
-header0.appendChild(h1);
-header0.appendChild(input);
-h1.innerHTML="my collection"
+
 
 let main = document.createElement("main")
 body.appendChild(main)
@@ -185,7 +210,7 @@ button.addEventListener('click',function (){
        header0.style.color ='white'
    }
    else{
-       header0.style.backgroundColor='blue'
+       header0.style.backgroundColor='midnightblue'
        button.innerHTML ='Dark'
        header0.style.color = 'wheat'
        button.style.textShadow = "1px 1px 5px black"

@@ -12,7 +12,7 @@ body >header{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    background-color:blue;
+    background-color:midnightblue;
     color: wheat;
     height: 100px;
     width: 100%;
@@ -20,9 +20,19 @@ body >header{
 }
 header>h1{
     margin-left: 10px;
+    flex-basis: 90%;
 }
-header>h2{
+header>select{
     margin-right: 10px;
+}
+body>header>div{
+    height: fit-content;
+    width: 50%;
+    display: inline-block;
+    justify-content: space-around;
+    background-color: transparent;
+    border: none;
+    
 }
 
 article>header{
