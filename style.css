@@ -90,8 +90,8 @@ img{
     
     border: 1px solid blue;
     border-radius: 10px;
-    margin: 10px;
-    height: 300px;
+    margin: 10px 0 10px 5%;
+    height: 350px;
     width: 90%;
     
     
@@ -99,6 +99,8 @@ img{
 picture{
     position: relative;
     display: inline-block;
+    width: 100%;
+    
 }
 figcaption{
     
@@ -193,5 +195,8 @@ button:hover{
     }
     button{
         display: none;
+    }
+    img{
+        height: 300px;
     }
 }
